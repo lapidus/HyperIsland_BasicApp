@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+
+    <link href="styles/styles.css" rel="stylesheet">
+
+
+    <meta charset="utf-8">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="partyApp">
+
+
+
+<div class="container">
+
+    <h1>Who votes how?</h1>
+
+    <div>
+
+        <select class="form-control" style="width: 200px" ng-model="model.indicator" ng-options="indicator.id as indicator.name for indicator in indicators"></select>
+
+    </div>
+
+    <!--<div>{{ model.indicator }}</div-->
+
+
+   <linechart></linechart>
+
+
+</div>
+
+
+
+<script type="text/ng-template" id="linechartTemplate.html">
+
+    <h2>Linechart</h2>
+    <div class="chart-container"></div>
+
+</script>
+
+<!--
+<script src="https://code.jquery.com/jquery.js"></script>
+-->
+
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+
+
+
+<script src="src/app.js"></script>
+<script src="src/lineChart.js"></script>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--<script src="js/bootstrap.min.js"></script>-->
+</body>
+</html>
